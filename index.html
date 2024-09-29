@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #C7B8EA;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add a header section with a navigation bar -->
+  <header class="bg-purple-800 text-white p-4 mb-4">
+    <nav class="max-w-md mx-auto flex justify-between">
+      <h1 class="text-2xl font-bold">Stopwatch</h1>
+      <ul class="list-none p-0 m-0 flex justify-end">
+        <li class="mr-4"><a href="#" class="text-white hover:text-gray-300">About</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content section -->
+  <main class="max-w-md mx-auto p-4 mt-12 bg-white rounded shadow-md">
+    <!-- Stopwatch display and controls -->
+    <div class="flex flex-col items-center mb-4">
+      <h1 class="text-3xl font-bold mb-4">Stopwatch</h1>
+      <div class="relative w-64 h-64 bg-cover bg-center rounded-full" style="background-image: url('stopwatch.png');">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl font-bold" id="display">00:00:00.00</div>
+      </div>
+      <div class="flex justify-center mb-4">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2" id="start-button">Start</button>
+        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mr-2" id="pause-button">Pause</button>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2" id="restart-button">Restart</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" id="lap-button">Lap</button>
+        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" id="reset-button">Reset</button>
+      </div>
+    </div>
+
+    <!-- Lap times list -->
+    <div class="mb-4">
+      <h2 class="text-2xl font-bold mb-2">Lap Times</h2>
+      <ul class="list-none p-0 m-0" id="lap-times"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
